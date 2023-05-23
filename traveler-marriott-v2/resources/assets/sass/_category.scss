@@ -1,0 +1,112 @@
+@charset "UTF-8";
+// Variables
+// =================================================
+@import 'variables';
+@import 'mixins';
+
+
+.category-city {
+    .sidebar {
+        border-left: 0 none;
+    }
+}
+
+.where-to-list {
+    padding-top: 20px;
+    ul {
+        margin: 0;
+    }
+    li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    a {
+        line-height: 1.2;
+        font-size: rem(20);
+        letter-spacing: -0.2px;
+        font-family: $header-font-family;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.term-title {
+    margin-bottom: 3rem;
+}
+
+.child-categories {
+    .category-label {
+        &.category-label-2x {
+            margin-bottom: 10px;
+        }
+    }
+    .category-posts {
+        padding-bottom: 5rem;
+        border-bottom: 1px solid $medium-gray;
+        &:last-of-type {
+            border-bottom: 0 none;
+        }
+    }
+    .category-post {
+        margin-bottom: 0;
+    }
+    .category-post-0 {
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        border-right: 1px solid $medium-gray;
+    }
+    .category-post-1 {
+        padding-right: 0;
+        border-right: 0 none;
+    }
+    .category-post-2 {
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .category-post_image {
+        width: 100%;
+        max-width: 45%;
+    }
+    .category-post_content {
+        width: auto;
+    }
+    .category-post--secondary {
+        text-align: center;
+        padding-left: 20px;
+        border-bottom: 0 none;
+        >.category-label {
+            margin-bottom: 0;
+        }
+        .category-post {
+            text-align: left;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+        .category-post-1 {
+            border-bottom: 1px solid $medium-gray;
+        }
+        .category-post_content {
+            padding-left: 0;
+        }
+    }
+}
+
+.category-list {
+    margin: 0 8%;
+}
+
+.category-list,
+.category-list--alt {
+    .category-post {
+        padding-bottom: 45px;
+        border-bottom: 1px solid $medium-gray;
+    }
+}
+
+.category-list--alt {
+    .category-post_content {
+        width: 65%;
+    }
+}

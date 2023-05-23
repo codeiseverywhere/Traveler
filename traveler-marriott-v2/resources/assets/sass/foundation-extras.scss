@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+// Before importing Foundation framework itself we will
+// overwrite its settings with out own variables.
+@import 'mixins';
+@import 'variables';
+
+// Import Foundation framework and its dependencies.
+@import '~foundation-sites/scss/foundation';
+@import '~motion-ui/src/motion-ui';
+
+
+@include foundation-button;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-reveal;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-flex-classes;
+@include foundation-prototype-text-transformation;
+@include foundation-prototype-font-styling;
+@include foundation-prototype-list-style-type;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;

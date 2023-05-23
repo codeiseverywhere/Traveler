@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+// Before importing Foundation framework itself we will
+// overwrite its settings with out own variables.
+@import 'mixins';
+@import 'variables';
+
+// Import Foundation framework and its dependencies.
+@import '~foundation-sites/scss/foundation';
+
+// Now we will include all of the Foundation components.
+// Comment out unused components for keeping
+// CSS output file as light as can.
+@include foundation-global-styles;
+@include foundation-xy-grid-classes;
+@include foundation-typography;

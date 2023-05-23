@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+// Variables
+// =================================================
+@import '../../../../assets/sass/variables';
+
+.booking {
+  background: $white;
+  border: 1px solid $black;
+  margin: 0.125rem auto 2rem;
+
+  // Vars
+  >.cell {
+    background: $mfp-caption-title-color;
+    &.logo {
+      background: $white;
+    }
+  }
+
+  form {
+    padding: 9px 0;
+  }
+
+  fieldset {
+    border: 0 none;
+    padding-bottom: 0;
+
+    label {
+      display: block;
+      position: relative;
+
+      > img {
+        left: 4px;
+        bottom: 5px;
+        opacity: 0.4;
+        position: absolute;
+        transform: scale(0.8);
+      }
+    }
+
+    input {
+      padding: 3px;
+    }
+
+    input,
+    input:focus {
+      width: 100%;
+      color: $black;
+      outline: 0 none;
+      border-radius: 0;
+      border: 1px solid $black;
+    }
+  }
+
+  .single-search-destination {
+    padding-left: 25px;
+  }
+
+  // Support
+
+  // Module
+  &.mobile {
+    width: 300px;
+    height: 250px;
+
+    > .cell {
+      width: 100%;
+      flex: 0 0 auto;
+    }
+
+    .logo {
+      width: 100%;
+      margin-top: 16px;
+      margin-bottom: 5px;
+    }
+
+    .button {
+      margin-top: 10px;
+    }
+
+  }
+
+  &.desktop {
+    width: 728px;
+    height: 90px;
+
+    .logo {
+      width: 164px;
+    }
+
+    fieldset {
+      margin: 0;
+      width: 38%;
+      padding-right: 0;
+      padding-left: 1rem;
+    }
+  }
+
+  .button {
+    margin-top: 24px;
+    margin-bottom: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    &.black {
+      background: $black;
+    }
+  }
+}
+

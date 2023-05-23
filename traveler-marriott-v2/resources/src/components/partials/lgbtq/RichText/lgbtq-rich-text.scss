@@ -1,0 +1,371 @@
+/* RICH TEXT LEFT ALIGN */
+.lgbtq-rich-text-left {
+  overflow: hidden;
+  position: relative;
+}
+
+.lgbtq-rich-text-left .lgbtq-section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.lgbtq-rich-text-left-container {
+  margin: 0;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    padding-bottom: 160px;
+    padding-top: 160px;
+    width: calc(100% * (8 / 12));
+  }
+}
+
+.lgbtq-rich-text-left .lgbtq-section-image-background {
+  background-color: #000000;
+  overflow: hidden;
+  position: relative;
+}
+
+.lgbtq-rich-text-left .lgbtq-section-image-background .lgbtq-bg-desktop img,
+.lgbtq-rich-text-left .lgbtq-section-image-background .lgbtq-bg-mobile img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.lgbtq-rich-text-left .lgbtq-section-inner-heading {
+  padding-bottom: 100px;
+  padding-top: 80px;
+}
+
+.lgbtq-rich-text-left .lgbtq-section-inner-body img {
+  display: block;
+  height: 100%;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  width: 100% !important;
+}
+
+.lgbtq-border-yes {
+  border-top: 2px solid #FF00A8;
+}
+
+.lgbtq-rich-text-left .lgbtq-section-inner-heading .lgbtq-header-1 {
+  margin-bottom: 0px;
+}
+
+.lgbtq-image-gif .lgbtq-bg-mobile .lgbtq-background-image {
+  height: auto !important;
+}
+
+.lgbtq-image-gif .lgbtq-section-inner-body {
+  margin-top: 380px;
+}
+
+.no-heading .lgbtq-section-inner-heading {
+  display: none;
+}
+
+.lgbtq-protecting-safe .lgbtq-rich-text-right-container,
+.lgbtq-protecting-safe .lgbtq-rich-text-left-container {
+  @media only screen and (min-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+}
+
+.lgbtq-minko .lgbtq-rich-text-right-container,
+.lgbtq-minko .lgbtq-rich-text-left-container {
+  @media only screen and (min-width: 768px) {
+    padding-top: 60px;
+
+  }
+}
+
+.lgbtq-julius-bars .lgbtq-rich-text-right-container,
+.lgbtq-julius-bars .lgbtq-rich-text-left-container {
+  @media only screen and (min-width: 768px) {
+    padding-top: 60px;
+
+  }
+}
+
+.lgbtq-custom .lgbtq-rich-text-left-container,
+.lgbtq-custom .lgbtq-rich-text-right-container {
+  @media only screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+  }
+}
+
+.lgbtq-allen-cummings .lgbtq-rich-text-left-container,
+.lgbtq-allen-cummings .lgbtq-rich-text-right-container {
+  @media only screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+  }
+}
+
+.lgbtq-drag-activism .lgbtq-rich-text-left-container,
+.lgbtq-drag-activism .lgbtq-rich-text-right-container {
+  @media only screen and (min-width: 768px) {
+    padding-bottom: 60px;
+    padding-top: 80px;
+  }
+}
+
+.lgbtq-patrons .lgbtq-rich-text-left-container,
+.lgbtq-patrons .lgbtq-rich-text-right-container {
+  @media only screen and (min-width: 768px) {
+    padding-bottom: 60px;
+    padding-top: 60px;
+
+  }
+}
+
+@media only screen and (min-width: 720px) {
+
+  .lgbtq-visitor-seeking .lgbtq-rich-text-right-container,
+  .lgbtq-visitor-seeking .lgbtq-rich-text-left-container {
+    padding-top: 80px;
+  }
+
+  .lgbtq-come-to-cabaret .lgbtq-rich-text-left-container,
+  .lgbtq-come-to-cabaret .lgbtq-rich-text-right-container {
+    padding-bottom: 10px;
+    padding-top: 100px;
+  }
+
+  .lgbtq-lesbian-bar .lgbtq-rich-text-left-container,
+  .lgbtq-lesbian-bar .lgbtq-rich-text-right-container {
+    padding-bottom: 10px;
+    padding-top: 100px;
+  }
+
+
+}
+
+@media (max-width:767px) {
+  .lgbtq-border-yes {
+    width: 238px;
+  }
+
+  .lgbtq-lesbian-bar::before,
+  .lgbtq-lesbian-bar::after {
+    display: none;
+  }
+
+  .lgbtq-lesbian-bar .lgbtq-rich-text-left-container {
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+  }
+
+  .lgbtq-visitor-seeking::before,
+  .lgbtq-visitor-seeking::after {
+    display: none;
+  }
+
+  .lgbtq-visitor-seeking .lgbtq-intro-copy {
+    margin-bottom: 0;
+  }
+
+  .lgbtq-protecting-safe::before,
+  .lgbtq-protecting-safe::after {
+    display: none;
+  }
+
+  .lgbtq-rich-text-left .lgbtq-section-inner-heading .lgbtq-callout-copy,
+  .lgbtq-rich-text-right .lgbtq-section-inner-heading .lgbtq-callout-copy {
+    font-size: 16px !important;
+  }
+
+  .lgbtq-patrons::before,
+  .lgbtq-patrons::after {
+    display: none;
+  }
+
+  .lgbtq-patrons .lgbtq-rich-text-left-container {
+    padding-top: 0px !important;
+  }
+
+  .lgbtq-bar-project::before,
+  .lgbtq-bar-project::after {
+    display: none;
+  }
+
+  .lgbtq-bar-project .lgbtq-rich-text-left-container {
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+  }
+
+  .lgbtq-allen-cummings::before,
+  .lgbtq-allen-cummings::after {
+    display: none;
+  }
+
+  .lgbtq-allen-cummings .lgbtq-rich-text-right-container {
+    padding-top: 0px !important;
+  }
+
+  .lgbtq-allen-cummings .lgbtq-intro-copy {
+    margin-bottom: 0;
+  }
+
+  .lgbtq-drag-activism::before,
+  .lgbtq-drag-activism::after {
+    display: none;
+  }
+
+  .lgbtq-drag-activism .lgbtq-rich-text-left-container {
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+  }
+
+  .lgbtq-drag-activism .lgbtq-section-inner-body {
+    display: none;
+  }
+
+  .lgbtq-minko::before {
+    display: none;
+  }
+
+  .lgbtq-minko .lgbtq-intro-copy {
+    margin-bottom: 0 !important
+  }
+
+  .lgbtq-julius-bars .lgbtq-bg-mobile img {
+    bottom: 0;
+    height: 40% !important;
+    object-position: right !important;
+    top: unset !important;
+  }
+
+  .lgbtq-hudson::after {
+    background: linear-gradient(180deg, #000000 0%, #00061B 100%) !important;
+    height: 25% !important;
+    z-index: 0 !important;
+  }
+
+  .lgbtq-hudson .lgbtq-rich-text-right-container {
+    padding-bottom: 0 !important;
+  }
+
+  .lgbtq-come-to-cabaret::before {
+    display: none;
+  }
+
+  .lgbtq-come-to-cabaret .lgbtq-rich-text-left-container {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .lgbtq-come-to-cabaret .lgbtq-section-inner-body {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .lgbtq-border-yes {
+    width: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .lgbtq-rich-text-left .lgbtq-section-inner-heading {
+    padding-bottom: 160px;
+    padding-top: 100px;
+  }
+
+  .lgbtq-rich-text-left .lgbtq-section-inner-heading .lgbtq-header-1 {
+    margin-bottom: 40px;
+  }
+
+  .lgbtq-rich-text-left .lgbtq-section-inner-body img {
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+
+  .lgbtq-border-yes {
+    width: 700px;
+  }
+}
+
+/* RICH TEXT RIGHT ALIGN */
+.lgbtq-rich-text-right {
+  overflow: hidden;
+  position: relative;
+}
+
+.lgbtq-rich-text-right .lgbtq-section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.lgbtq-rich-text-right-container {
+  margin: 0;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  width: 100%;
+}
+
+.lgbtq-rich-text-right .lgbtq-section-image-background {
+  background-color: #000000;
+  overflow: hidden;
+  position: relative;
+}
+
+.lgbtq-rich-text-right .lgbtq-section-image-background .lgbtq-bg-desktop img,
+.lgbtq-rich-text-right .lgbtq-section-image-background .lgbtq-bg-mobile img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.lgbtq-rich-text-right .lgbtq-section-inner-heading {
+  padding-bottom: 100px;
+  padding-top: 80px;
+}
+
+.lgbtq-rich-text-right .lgbtq-section-inner-body img {
+  display: block;
+  height: 100%;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  width: 100% !important;
+}
+
+@media (min-width: 1024px) {
+  .lgbtq-rich-text-right-container {
+    margin-left: calc(100% * (4 / 12));
+    padding-bottom: 160px;
+    padding-top: 160px;
+    width: calc(100% * (8 / 12));
+  }
+
+  .lgbtq-rich-text-right .lgbtq-section-inner-heading {
+    padding-bottom: 160px;
+    padding-top: 100px;
+  }
+
+  .lgbtq-rich-text-right .lgbtq-section-inner-body img {
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+
+  .lgbtq-image-gif .lgbtq-section-inner-body {
+    margin-top: 0px;
+  }
+}

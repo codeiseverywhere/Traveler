@@ -1,0 +1,89 @@
+.owl-theme {
+	// Styling Next and Prev buttons
+
+	.owl-nav {
+    top: 50%;
+    z-index: 10;
+    width: 100%;
+    color: $nav-color;
+    position: absolute;
+    text-align: center;
+    transform: translateY(-50%);
+    -webkit-tap-highlight-color: transparent;
+    @media (max-width: $screen-tablet-max) {
+      display: none;
+    }
+    .owl-prev {
+      float: left;
+    }
+    .owl-next {
+      float: right;
+    }
+
+		[class*='owl-'] {
+      cursor: pointer;
+      margin: $nav-margin;
+      display: inline-block;
+      color: $nav-color !important;
+      font-size: $nav-font-size !important;
+      &:focus {
+        outline: 0 none;
+      }
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		.disabled {
+			opacity: $nav-disabled-opacity;
+			cursor: default;
+		}
+	}
+
+	// Styling dots
+	.owl-nav.disabled + .owl-dots {
+		margin-top: 10px;
+	}
+
+	.owl-dots {
+    right: 0;
+    width: auto;
+    bottom: 20px;
+    padding: 20px;
+		text-align: right;
+    position: absolute;
+		-webkit-tap-highlight-color: transparent;
+    @media (max-width: $screen-tablet-max) {
+      bottom: 0;
+      padding-bottom: 5px;
+    }
+
+		.owl-dot {
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+      &:focus {
+        outline: 0 none;
+      }
+
+			span {
+				width: $dot-width;
+				height: $dot-height;
+				margin: $dot-margin;
+        border: 2px solid $dot-background;
+        background: $dot-background;
+				display: block;
+				-webkit-backface-visibility: visible;
+				transition: opacity 200ms ease;
+				border-radius: 30px;
+			}
+
+			&.active,
+			&:hover {
+				span {
+					background: transparent;
+				}
+			}
+		}
+	}
+}

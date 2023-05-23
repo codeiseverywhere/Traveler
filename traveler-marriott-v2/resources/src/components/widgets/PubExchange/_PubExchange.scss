@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+// Variables
+// =================================================
+@import '../../../../assets/sass/variables';
+@import '../../../../assets/sass/mixins';
+
+.pubexchange_module {
+  padding-top: 20px;
+
+  &:before {
+    top: 0;
+    left: 50%;
+    height: 5px;
+    content: '';
+    width: 50px;
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: $alert-color;
+  }
+}
+
+#pubexchange_below_content {
+  a {
+    &:hover {
+      color: $black !important;
+    }
+  }
+
+  .pe-thumb-wrapper {
+    padding-bottom: 56.25% !important;
+
+    img {
+      margin-left: 0 !important;
+    }
+  }
+
+  .pe-title {
+    display: block;
+    line-height: 1;
+    font-size: rem(18) !important;
+    letter-spacing: -0.3px;
+  }
+}
+
+.pe-wrapper {
+  padding-top: 0;
+}
+
+.pe-thumb-wrapper {
+  margin-bottom: 10px;
+}
+
+@media (max-width: $screen-tablet-min) {
+
+  #pubexchange_below_content {
+    margin-bottom: 6rem;
+
+    .block-wrapper {
+      .pe-module {
+        margin-left: -0.625rem;
+        margin-right: -0.625rem;
+      }
+
+      li.pe-article {
+        width: calc(33.3333333333% - 1.25rem);
+        margin-left: 0.625rem;
+        margin-right: 0.625rem;
+      }
+    }
+  }
+}

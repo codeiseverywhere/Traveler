@@ -1,0 +1,385 @@
+@charset "UTF-8";
+
+// Variables
+// =================================================
+@import 'variables';
+@import 'mixins';
+
+// Magnific styles
+@import "magnific";
+
+.byline {
+  display: block;
+  margin-top: 1rem;
+  letter-spacing: 0;
+  line-height: 1.45;
+  font-size: rem(18);
+  margin-bottom: 2rem;
+
+  a {
+    @include highlight-link;
+  }
+}
+
+.post-content {
+  font-size: rem(19);
+  @include content-width();
+
+  a {
+    text-decoration: none;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    @include highlight-link();
+  }
+
+  p + p,
+  p + ul,
+  p + ol,
+  p + figure,
+  figure.alignleft + p {
+    margin-top: 30px;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: rem(28);
+    font-family: $body-font-family;
+  }
+
+  h2 {
+    font-size: rem(24);
+  }
+
+  h3 {
+    font-size: rem(20);
+  }
+
+  h4 {
+    font-size: rem(18);
+  }
+
+  h5 {
+    color: $dark-gray;
+    font-size: rem(14);
+    font-family: $body-font-family;
+  }
+
+  > h5 {
+    &:first-of-type {
+      display: none;
+    }
+  }
+
+  p + h5 {
+    margin-top: -0.75rem;
+  }
+
+  > p {
+    &:first-of-type {
+      color: $darkest-gray;
+      @include dropcap;
+    }
+  }
+
+  h5,
+  img,
+  .wp-caption-text {
+    @include container-width();
+  }
+
+  img,
+  figure {
+    &:not(.wp-block-embed) {
+      &.alignleft,
+      &.alignright {
+        width: auto !important;
+        overflow-x: hidden;
+
+        img {
+          margin: 0;
+          width: 100%;
+        }
+      }
+    }
+
+    &.alignnone {
+      margin-bottom: 36px;
+    }
+
+    &.alignleft {
+      margin-left: -8.25%;
+    }
+
+    &.alignright {
+      margin-right: -8.25%;
+    }
+  }
+}
+
+.inline-quote {
+  float: right;
+  max-width: 300px;
+  position: relative;
+  padding-left: 20px;
+  margin: 20px -16.5% 20px 0;
+
+  &:before {
+    top: 0;
+    left: 50%;
+    height: 5px;
+    content: '';
+    width: 50px;
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: $alert-color;
+  }
+
+  blockquote {
+    color: $black;
+    border: 0 none;
+    font-size: 2rem;
+    padding: 20px 0;
+    line-height: 1.4;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: -0.38px;
+    font-family: $header-font-family;
+
+    p {
+      color: $black;
+    }
+  }
+
+  cite,
+  footer {
+    text-transform: uppercase;
+    font: normal 700 1rem/1 $body-font-family;
+  }
+}
+
+.more-box {
+  float: left;
+  max-width: 300px;
+  padding-top: 20px;
+  position: relative;
+  text-align: center;
+  padding-right: 20px;
+  margin: 20px 0 20px -16.5%;
+
+  strong:before {
+    top: 0;
+    left: 50%;
+    height: 5px;
+    content: '';
+    width: 50px;
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: $alert-color;
+  }
+
+  a {
+    display: block;
+    line-height: 1.3;
+    padding: 10px 3px;
+    box-shadow: 0 0 0 transparent;
+    font-family: $header-font-family;
+    border-bottom: 1px solid $medium-gray;
+
+    &:last-of-type {
+      border-bottom: 0 none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      background-color: transparent;
+    }
+  }
+}
+
+.tags {
+  margin-top: 20px;
+  padding-top: 20px;
+  font-size: rem(18);
+  border-top: 1px solid $medium-gray;
+
+  a {
+    @include highlight-link();
+  }
+}
+
+.post-content + .tags {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.highlight-block {
+  height: auto;
+  margin: 6rem 0;
+  max-width: none;
+  padding: 1rem 3rem;
+  background:#FDF3ED;
+
+  h2 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: rem(18);
+    margin-bottom: 1.75rem;
+    text-transform: uppercase;
+    font-family: $body-font-family;
+  }
+
+  .where-to {
+    .category-label {
+      margin-top: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+
+/**
+ * @todo: remove pubexchange
+ */
+.related-posts,
+.pubexchange_module {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.related-posts {
+  margin-top: 4rem;
+  padding-bottom: 8rem;
+
+  .widget-title {
+    margin-bottom: 2rem;
+  }
+
+  .post-title {
+    font-size: rem(24);
+  }
+}
+
+.related-post_content {
+  margin-top: 10px;
+}
+
+.related-post_image {
+  width: 100%;
+}
+
+@media (max-width: $screen-tablet-min) {
+
+  .post-content {
+    margin: 0 8% 0;
+
+    h5,
+    img,
+    .wp-caption-text {
+      margin-left: -5vw;
+      margin-right: -5vw;
+      max-width: 90vw !important;
+    }
+
+    .no-native-parallax {
+      &.has-parallax {
+        background: none !important;
+      }
+
+      .parallax-wrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        clip-path: inset(0 0 0 0);
+      }
+
+      .parallax-bg {
+        height: 100vh !important;
+        background-size: cover;
+        background-position: top center;
+      }
+    }
+  }
+
+  .inline-quote {
+    margin-right: -9.5%;
+
+    blockquote {
+      font-size: 1.75rem;
+
+      p {
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .more-box {
+    margin-left: -9.5%;
+  }
+
+  .related-moment {
+    margin-bottom: 3rem;
+
+    img {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .highlight-block {
+    padding: 1rem 2rem;
+  }
+
+  .related-post {
+    margin-bottom: 1rem;
+  }
+
+  /**
+   * @todo: remove pubexchange
+   */
+  .related-posts,
+  .pubexchange_module {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .block-wrapper {
+    overflow-x: scroll;
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: $highlight-grey $white;
+
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+      background-color: $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $highlight-grey;
+    }
+
+    > * {
+      width: rem(1024);
+      overflow: hidden;
+    }
+  }
+}
+
+@media (max-width: $screen-phone-min) {
+  .inline-quote,
+  .more-box {
+    float: none;
+    max-width: 280px;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

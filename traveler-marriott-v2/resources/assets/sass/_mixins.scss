@@ -1,0 +1,143 @@
+// _mixins.scss
+
+@import '~foundation-sites/scss/prototype/relation';
+
+@function rem($values, $base: null) {
+  @return rem-calc($values, $base: null);
+}
+
+@function headings($from:1, $to:6) {
+  @if $from == $to {
+    @return 'h#{$from},.h#{$from}';
+  } @else {
+    @return 'h#{$from},.h#{$from},' + headings($from+1, $to);
+  }
+}
+
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  overflow: hidden;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > * {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+//Common mixins
+@mixin full-image( $margin:17 ) {
+  $side-margin: $margin * 2;
+  max-width: none;
+  margin: 0 rem(-$margin 30);
+  width: calc(100% + #{$side-margin}px) !important;
+}
+
+@mixin full-center-img {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@mixin highlight-link() {
+  line-height: 1.5;
+  border-bottom: .125rem solid $highlight-grey;
+  box-shadow: inset 0 rem(-2px) 0 $highlight-grey;
+  transition: background .15s cubic-bezier(0.33, 0.66, 0.66, 1);
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: $highlight-grey;
+  }
+}
+
+@mixin content-width() {
+  margin: 0 15% 0;
+  position: relative;
+}
+
+@mixin container-width() {
+  height: auto;
+  max-width: none !important;
+  margin-left: -8.25%;
+  margin-right: -8.25%;
+  width: calc(100% + 16.5%);
+}
+
+@mixin light-box() {
+  border: 1px solid $white;
+  background: $lightest-gray;
+  box-shadow: 0 2px 4px 0 rgba($black, 0.50);
+}
+
+@mixin dark-box() {
+  border: 1px solid $black;
+  background: rgba($black, 0.98);
+  box-shadow: 0 2px 4px 0 rgba($black, 0.50);
+}
+
+@mixin dropcap() {
+  line-height: 1.31;
+  font-size: rem(26);
+  margin-bottom: 2rem;
+  @media (max-width: $screen-tablet-min) {
+    line-height: 1.4;
+    font-size: rem(22);
+  }
+
+  &:first-letter {
+    float: left;
+    font-weight: 700;
+    line-height: 0.9;
+    font-size: rem(72);
+    color: $alert-color;
+    padding: 0 8px 0 3px;
+    font-family: $header-font-family;
+  }
+}
+
+@mixin play-button( $bsize:80, $asize:16 ) {
+  &:before {
+    content: "";
+    z-index: 1;
+    width: #{$bsize}px;
+    height: #{$bsize}px;
+    display: block;
+    cursor: pointer;
+    background: $white;
+    -webkit-backface-visibility: hidden;
+    box-shadow: 0 0 4px 0 rgba($black, 0.2);
+    @include full-center-img;
+  }
+
+  &:after {
+    width: 0;
+    height: 0;
+    z-index: 1;
+    content: "";
+    display: block;
+    border-style: inset inset inset solid;
+    border-width: #{$asize}px 0 #{$asize}px #{$asize*2}px;
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) $black;
+    @include full-center-img;
+  }
+}
+
+@mixin image-caption() {
+  color: $dark-gray;
+  font-size: 14px;
+  line-height: 1.79;
+  margin-top: 15px;
+  font-family: $body-font-family;
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+[data-aos="line-grow"] {
+  opacity: 1;
+  transition-property: width, opacity;
+  width: 100%;
+}
+
+[data-aos="line-grow"].aos-animate {
+  opacity: 1;
+  width: 100%;
+}

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+// Variables
+// =================================================
+@import '../../../../assets/sass/variables';
+@import '../../../../assets/sass/mixins';
+
+.MorePosts {
+  background-color: $black;
+  color: $white;
+
+  &:hover {
+    background-color: $dark-gray;
+  }
+}

@@ -1,0 +1,160 @@
+@import '~foundation-sites/scss/util/util';
+
+// Colors
+// =================================================
+
+$lightest-gray: #f4f4f4;
+$light-gray: #f0f1f3;
+$medium-gray: #cccccc;
+$dark-gray: #979797;
+$darkest-gray: #707070;
+$light-coral: #fff3ed;
+$black: #1c1c1c;
+$white: #ffffff;
+$highlight-grey: #cecece;
+
+$primary: #153fa6;
+$global-width: rem(1280);
+$element-margin: 40px;
+
+//$body-font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+//$header-font-family: 'Lora', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+
+$body-font-family: 'Helvetica Neue', system-ui, -apple-system,
+  BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+  sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+  Noto Color Emoji;
+$header-font-family: TimesNewRomanPSMT, TimesNewRoman, 'Times New Roman', Times,
+  Baskerville, Georgia, Cambria, Times New Roman, Times, serif;
+
+$foundation-palette: (
+  primary: #1779ba,
+  secondary: #767676,
+  success: #3adb76,
+  warning: #f4d658,
+  alert: #ff9662,
+);
+
+@include add-foundation-colors;
+
+$anchor-color: $black;
+$anchor-color-hover: $black;
+$dropdown-menu-item-color-active: $black;
+
+/// Styles for headings at various screen sizes. Each key is a breakpoint, and each value is a map of heading styles.
+/// @type Map
+$header-styles: (
+  small: (
+    'h1': (
+      'font-size': 36,
+    ),
+    'h2': (
+      'font-size': 28,
+    ),
+    'h3': (
+      'font-size': 22,
+    ),
+    'h4': (
+      'font-size': 18,
+    ),
+    'h5': (
+      'font-size': 17,
+    ),
+    'h6': (
+      'font-size': 16,
+    ),
+  ),
+  medium: (
+    'h1': (
+      'font-size': 48,
+    ),
+    'h2': (
+      'font-size': 40,
+    ),
+    'h3': (
+      'font-size': 31,
+    ),
+    'h4': (
+      'font-size': 25,
+    ),
+    'h5': (
+      'font-size': 20,
+    ),
+    'h6': (
+      'font-size': 16,
+    ),
+  ),
+);
+
+$orbit-bullet-background: $black;
+$orbit-bullet-background-active: $warning-color;
+$orbit-control-background-hover: rgba($warning-color, 1);
+
+////////////////////////
+//  Template Settings //
+////////////////////////
+$screen-tablet-max: 1024px;
+$screen-tablet-min: 768px;
+$screen-phone-min: 480px;
+
+$topbar-padding: 0 0.5rem;
+$topbar-background: transparent;
+$topbar-input-width: 200px;
+$topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
+$topbar-submenu-background: $topbar-background;
+$topbar-unstack-breakpoint: medium;
+
+$blockquote-color: $black;
+$blockquote-padding: rem-calc(9 20 0 19);
+$blockquote-border: 5px solid $alert-color;
+
+////////////////////////
+//  Magnific Settings //
+////////////////////////
+
+// overlay
+$mfp-overlay-color: #000 !default; // Color of overlay screen
+$mfp-overlay-opacity: 0.98 !default; // Opacity of overlay screen
+$mfp-shadow: 0 0 8px rgba(0, 0, 0, 0.6) !default; // Shadow on image or iframe
+
+// spacing
+$mfp-popup-padding-left: 8px !default; // Padding from left and from right side
+$mfp-popup-padding-left-mobile: 6px !default; // Same as above, but is applied when width of window is less than 800px
+
+$mfp-z-index-base: 1040 !default; // Base z-index of popup
+
+// controls
+$mfp-include-arrows: true !default; // Include styles for nav arrows
+$mfp-controls-opacity: 0.65 !default; // Opacity of controls
+$mfp-controls-color: $black !default; // Color of controls
+$mfp-controls-border-color: $black !default; // Border color of controls
+$mfp-inner-close-icon-color: #333 !default; // Color of close button when inside
+$mfp-controls-text-color: #ccc !default; // Color of preloader and "1 of X" indicator
+$mfp-controls-text-color-hover: #fff !default; // Hover color of preloader and "1 of X" indicator
+
+// Iframe-type options
+$mfp-include-iframe-type: true !default; // Enable Iframe-type popups
+$mfp-iframe-padding-top: 40px !default; // Iframe padding top
+$mfp-iframe-background: #000 !default; // Background color of iframes
+$mfp-iframe-max-width: 900px !default; // Maximum width of iframes
+$mfp-iframe-ratio: 9/16 !default; // Ratio of iframe (9/16 = widescreen, 3/4 = standard, etc.)
+
+// Image-type options
+$mfp-include-image-type: true !default; // Enable Image-type popups
+$mfp-image-background: #444 !default;
+$mfp-image-padding-top: 40px !default; // Image padding top
+$mfp-image-padding-bottom: 40px !default; // Image padding bottom
+$mfp-include-mobile-layout-for-image: true !default; // Removes paddings from top and bottom
+
+// Image caption options
+$mfp-caption-title-color: #f3f3f3 !default; // Caption title color
+$mfp-caption-subtitle-color: #bdbdbd !default; // Caption subtitle color
+
+// A11y
+$mfp-use-visuallyhidden: false !default; // Hide content from browsers, but make it available for screen readers
+
+$social-icon-width: 32px;
+
+$facebook-blue: #3d5a9b;
+$twitter-blue: #21acf1;
+$google-red: #da4e35;

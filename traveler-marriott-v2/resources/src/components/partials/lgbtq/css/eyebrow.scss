@@ -1,0 +1,24 @@
+@import "../../../../../assets/sass/variables";
+
+.lgbtq-eyebrow {
+  color: white;
+  font-family: $body-font-family;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 720px) {
+  .lgbtq-eyebrow {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lgbtq-eyebrow {
+    font-size: 20px;
+  }
+}

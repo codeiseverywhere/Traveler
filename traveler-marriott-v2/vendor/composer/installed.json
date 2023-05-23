@@ -1,0 +1,58 @@
+{
+    "packages": [
+        {
+            "name": "tonik/gin",
+            "version": "v3.1.0",
+            "version_normalized": "3.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tonik/gin.git",
+                "reference": "c3c3ade0e80995ded7de8bb3bb901373948017d5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tonik/gin/zipball/c3c3ade0e80995ded7de8bb3bb901373948017d5",
+                "reference": "c3c3ade0e80995ded7de8bb3bb901373948017d5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "brain/monkey": "^1.3.0",
+                "mockery/mockery": "0.9.*",
+                "php-mock/php-mock-phpunit": "^1.1",
+                "phpunit/phpunit": "^5.3.0",
+                "satooshi/php-coveralls": "^1.0.0"
+            },
+            "suggest": {
+                "tonik/cli": "Required for the proper operation of Gin CLI"
+            },
+            "time": "2019-08-20T10:14:13+00:00",
+            "type": "wordpress-plugin",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Tonik\\Gin\\": "src/Gin/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Foundation of the Tonik WordPress Starter Theme. Provides all custom functionalities which it offers.",
+            "keywords": [
+                "gin",
+                "tonik",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/tonik/gin/issues",
+                "source": "https://github.com/tonik/gin/tree/v3.1.0"
+            },
+            "install-path": "../tonik/gin"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}

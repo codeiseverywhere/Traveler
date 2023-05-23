@@ -1,0 +1,101 @@
+{
+    "key": "group_5c5d3a17baa30",
+    "title": "Category",
+    "fields": [
+        {
+            "key": "field_5c5d3a70440bd",
+            "label": "Sidebar",
+            "name": "sidebar",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "5c5d3aa4406ee": {
+                    "key": "5c5d3aa4406ee",
+                    "name": "ad_unit",
+                    "label": "Ad Unit",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c5d3ac2944ad",
+                            "label": "Ad ID",
+                            "name": "ad_id",
+                            "type": "text",
+                            "instructions": "Enter the ID of the ad unit you want to display.\r\nSupported Ad unit size: 300x250",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": 4,
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5c5d3adc944ae": {
+                    "key": "layout_5c5d3adc944ae",
+                    "name": "where_to_stay",
+                    "label": "Where to Stay",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c5d3ae7944af",
+                            "label": "Where to Stay",
+                            "name": "where_to_stay",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                }
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "category"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1556154424
+}

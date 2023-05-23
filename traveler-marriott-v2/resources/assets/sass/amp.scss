@@ -1,0 +1,621 @@
+@import 'variables';
+@import 'mixins';
+
+:root {
+  --lightest-gray: #{$lightest-gray};
+  --light-gray: #{$light-gray};
+  --medium-gray: #{$medium-gray};
+  --dark-gray: #{$dark-gray};
+  --darkest-gray: #{$darkest-gray};
+  --light-coral: #{$light-coral};
+  --black: #{$black};
+  --white: #{$white};
+  --header-bg-color: #{$white};
+  --main-bg-color: #{$white};
+}
+
+@mixin amp-img {
+  amp-img {
+    max-width: none;
+    width: 100%;
+
+    &.amp-wp-enforced-sizes[layout='intrinsic'] > img {
+      width: 100%;
+      height: auto;
+      max-width: none;
+      max-height: none;
+    }
+
+    .i-amphtml-intrinsic-sizer {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@mixin container-width() {
+  height: auto;
+  max-width: none;
+  margin-left: -8.25%;
+  margin-right: -8.25%;
+  width: calc(100% + 16.5%);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--black);
+  background: var(--white);
+  font-family: $body-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Headings
+#{headings()} {
+  color: var(--black);
+  font-style: normal;
+  font-weight: 400;
+  font-family: $header-font-family;
+  text-rendering: optimizeLegibility;
+}
+
+a,
+a:visited {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+  font-family: $body-font-family;
+}
+
+.amp-wp-header {
+  background-color: var(--header-bg-color);
+}
+
+.amp-site-title {
+  height: 10vw;
+  display: block;
+  max-height: 57px;
+  text-indent: -9999px;
+  background-image: url('/wp-content/themes/traveler-marriott-v2/public/images/logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Featured image */
+.amp-wp-article-featured-image {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  overflow-y: visible;
+  border-top: 5px solid $alert-color;
+
+
+  &.wp-caption .wp-caption-text {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .category-label {
+    margin-bottom: 0;
+  }
+
+  @include amp-img;
+}
+
+//Article
+
+.amp-title-container {
+  left: 50%;
+  width: 100%;
+  color: $black;
+  max-width: 940px;
+  margin-bottom: 0;
+  text-align: center;
+  position: relative;
+  background: $white;
+  padding: 1rem 1rem 0;
+  transform: translateX(-50%);
+
+  #{headings(1,2)} {
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-weight: 400;
+    line-height: 1.125;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+    font-family: $header-font-family;
+  }
+}
+
+.amp-wp-byline {
+  display: block;
+  margin-top: 1rem;
+  letter-spacing: 0;
+  line-height: 1.45;
+  font-size: rem(18);
+  margin-bottom: 2rem;
+
+  a {
+    @include highlight-link;
+  }
+}
+
+.category-label {
+  font-size: rem(14);
+  margin-bottom: 5px;
+  display: inline-block;
+  letter-spacing: -0.3px;
+  @include highlight-link;
+
+  &.category-label-2x {
+    font-size: rem(20);
+    margin-bottom: 30px;
+  }
+
+  &.category-label-alt {
+    border-bottom: 0 none;
+    box-shadow: 0 0 0 transparent;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+.wp-caption {
+  .wp-caption-text {
+    color: var(--dark-gray);
+    font-size: 0.875rem;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    border: 0 none transparent;
+  }
+}
+
+.amp-wp-article {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+.amp-wp-article-content {
+  margin: 0 8%;
+  line-height: 1.6;
+  font-size: rem(19);
+
+  a {
+    color: var(--black);
+    text-decoration: none;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    @include highlight-link();
+
+    &:visited {
+      color: var(--black);
+    }
+  }
+
+  p + p,
+  p + ul,
+  p + ol,
+  p + figure,
+  figure.alignleft + p {
+    margin-top: 30px;
+  }
+
+  #{headings(2,4)} {
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: rem(28);
+    font-family: $body-font-family;
+  }
+
+  h2 {
+    font-size: rem(24);
+  }
+
+  h3 {
+    font-size: rem(20);
+  }
+
+  h4 {
+    font-size: rem(18);
+  }
+
+  h5 {
+    color: $dark-gray;
+    font-size: rem(14);
+    font-family: $body-font-family;
+  }
+
+  > h5 {
+    &:first-of-type {
+      display: none;
+    }
+  }
+
+  p + h5 {
+    margin-top: -0.75rem;
+  }
+
+  > p {
+    &:first-of-type {
+      color: $darkest-gray;
+      @include dropcap;
+    }
+  }
+
+  img,
+  figure {
+    &:not(.wp-block-embed) {
+      &.alignleft,
+      &.alignright {
+        width: auto;
+        overflow-x: hidden;
+
+        img {
+          margin: 0;
+          width: 100%;
+        }
+      }
+    }
+
+    &.alignnone {
+      margin-bottom: 36px;
+    }
+
+    &.alignleft {
+      margin-left: -8.25%;
+    }
+
+    &.alignright {
+      margin-right: -8.25%;
+    }
+  }
+
+  @include amp-img;
+}
+
+.amp-wp-article-footer {
+  .amp-wp-tax-tag {
+    margin: 0 8%;
+    font-weight: 700;
+    color: var(--black);
+    font-size: 1.125rem;
+
+    a {
+      font-weight: 400;
+      @include highlight-link();
+    }
+  }
+}
+
+.highlight-block {
+  height: auto;
+  margin: 6rem 0;
+  max-width: none;
+  padding: 1rem 3rem;
+  background-color: $light-coral;
+
+  h2 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: rem(18);
+    margin-bottom: 1.75rem;
+    text-transform: uppercase;
+    font-family: $body-font-family;
+  }
+}
+
+.where-to {
+  margin-top: 3rem;
+
+  & + .moments {
+    padding-top: 3rem;
+    border-top: 1px solid $medium-gray;
+  }
+
+  .where-to-links {
+    margin: 0 0 3rem;
+    list-style: none;
+    position: relative;
+
+    ul {
+      margin: 0;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      list-style: inside disc;
+    }
+
+    li {
+      font-size: rem(20);
+      padding-bottom: 5px;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+
+      > * {
+        display: inline;
+      }
+    }
+  }
+
+  a {
+    font-weight: 400;
+    line-height: 1.5;
+    border-bottom: 0 none;
+    font-family: $header-font-family;
+    box-shadow: inset 0 0 0 transparent;
+
+    &:hover {
+      color: $alert-color;
+      text-decoration: none;
+      background-color: transparent;
+    }
+  }
+}
+
+.related-moments {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none outside;
+
+  .related-moment {
+    position: relative;
+    margin-bottom: 3rem;
+  }
+}
+
+.moments {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.moment_title {
+  display: block;
+  margin-top: 10px;
+  line-height: 1.175;
+  font-size: rem(24);
+  margin-bottom: 10px;
+  letter-spacing: -0.35px;
+  font-family: $header-font-family;
+}
+
+.amp-wp-footer {
+  .grid-x {
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+    flex-flow: row wrap;
+
+    .cell {
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+
+      &:first-of-type {
+        width: 69px;
+      }
+    }
+  }
+
+  .footer-about {
+    padding-left: 0;
+    max-width: none;
+    width: calc(100% - 70px);
+  }
+
+  .category-label {
+    font-size: 0.875rem;
+  }
+
+  amp-img {
+    min-width: 90vw;
+
+    &.i-amphtml-layout-size-defined {
+
+      i-amphtml-sizer {
+        height: 10px;
+        display: none;
+      }
+
+      .i-amphtml-fill-content {
+        position: relative;
+      }
+    }
+  }
+
+  @include amp-img;
+}
+
+.footer-about {
+  font-size: rem(14);
+
+  p {
+    max-width: 600px;
+    line-height: 1.6;
+    font-size: inherit;
+    color: var(--black);
+    margin-bottom: 1rem;
+    text-rendering: optimizeLegibility;
+  }
+
+  p + ul > li:first-of-type {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+    }
+  }
+
+  li {
+    &:nth-child(n + 2) {
+      &:after {
+        content: '|';
+        display: inline-block;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+
+    &:last-of-type {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.footer-copyright {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  border-top: 1px solid var(--medium-gray);
+}
+
+//Used instead of !important
+:root:not(#_):not(#_):not(#_):not(#_):not(#_) {
+  .amp-wp-article-content {
+    p amp-img,
+    figure.wp-caption {
+      @include container-width();
+    }
+  }
+}
+
+@media (min-width: $screen-tablet-max + 1) {
+  .category-label {
+    font-size: rem(16);
+  }
+
+  .amp-wp-header > div,
+  .amp-wp-footer > div,
+  .amp-wp-article {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+
+  .amp-wp-article-content {
+    @include content-width;
+  }
+
+  .amp-title-container {
+    #{headings(1,2)} {
+      font-size: rem(48);
+    }
+  }
+
+  //Article
+  .amp-wp-article-featured-image {
+    amp-img + .amp-title-container {
+      margin-top: -5rem;
+    }
+  }
+
+  .amp-wp-article-footer {
+    .amp-wp-tax-tag {
+      @include content-width;
+    }
+  }
+
+  .where-to {
+    .where-to-links {
+      &:before {
+        width: 1px;
+        content: '';
+        height: 100%;
+        display: block;
+        background: $medium-gray;
+        @include full-center-img;
+      }
+
+      li {
+        width: 50%;
+        flex: 0 0 auto;
+        font-size: rem(24);
+
+        &:nth-child(2n + 1) {
+          padding-right: 4rem;
+        }
+
+        &:nth-child(2n + 2) {
+          padding-left: 4rem;
+        }
+      }
+    }
+  }
+
+  .related-moments {
+    .related-moment {
+      flex: 1 1 0;
+      margin-bottom: 0;
+      margin-left: 0.9375rem;
+      margin-right: 0.9375rem;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+
+  .amp-wp-footer {
+    .grid-x {
+      .cell {
+        padding-left: 16px;
+        padding-right: 16px;
+
+        &:first-of-type {
+          width: 107px;
+        }
+      }
+    }
+
+    .footer-about {
+      width: calc(100% - 123px);
+    }
+
+    amp-img {
+      min-width: rem(1180);
+    }
+  }
+}

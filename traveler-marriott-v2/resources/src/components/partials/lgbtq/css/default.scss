@@ -1,0 +1,54 @@
+@import '../../../../../assets/sass/variables';
+
+.h-auto {
+  height: auto !important;
+}
+
+.single .wp-embed-responsive.single-post,
+.single .MorePosts,
+.single .social-share {
+  display: none;
+}
+
+.lgbtq-image-gif .lgbtq-bg-desktop img {
+  object-fit: contain !important;
+  object-position: right !important;
+}
+
+/* rich text, to be adjust when setup is done*/
+.rich-text img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.rich-text>* {
+  margin-top: 1em;
+}
+
+.rich-text ul li {
+  margin-left: -14px;
+}
+
+.rich-text a {
+  display: block;
+  color: #fff;
+}
+
+@media (min-width: 720px) {
+
+  /* rich text */
+  .rich-text ul li {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: $screen-phone-min) {
+
+  /* Header fix */
+  .header-light{
+    &.main-header {
+      position: relative;
+    }
+  }
+}

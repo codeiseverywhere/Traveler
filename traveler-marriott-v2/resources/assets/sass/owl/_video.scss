@@ -1,0 +1,68 @@
+/*
+ * 	Owl Carousel - Video Plugin
+ */
+
+.interactive-slider,
+.owl-carousel {
+  .owl-video-wrapper {
+    top: 0;
+    background: #000;
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+
+    iframe {
+      margin: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  .owl-video-play-icon {
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    position: absolute;
+    will-change: transform;
+    transition: transform 100ms ease;
+    -webkit-backface-visibility: hidden;
+    transform: translate(-50%, -50%) scale(1, 1);
+
+    @include play-button();
+
+    &:hover {
+      transform: translate(-50%, -50%) scale(1.125, 1.125);
+    }
+  }
+
+  .owl-video-playing .owl-video-tn,
+  .owl-video-playing .owl-video-play-icon {
+    display: none;
+  }
+
+  .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity 400ms ease;
+  }
+
+  .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+
+    iframe {
+      margin: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+  }
+
+}

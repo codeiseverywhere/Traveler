@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+// Variables
+// =================================================
+@import '../../../../assets/sass/variables';
+@import '../../../../assets/sass/mixins';
+
+.where-to {
+  margin-top: 3rem;
+
+  & + .moments {
+    padding-top: 3rem;
+    border-top: 1px solid $medium-gray;
+  }
+
+  .where-to-links {
+    margin: 0 0 3rem;
+    position: relative;
+    list-style: none;
+
+    &:before {
+      width: 1px;
+      content: '';
+      height: 100%;
+      display: block;
+      background: $medium-gray;
+      @include full-center-img;
+    }
+
+    ul {
+      margin: 0;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      list-style: inside disc;
+    }
+
+    li {
+      width: 50%;
+      flex: 0 0 auto;
+      font-size: rem(24);
+      padding-bottom: 5px;
+
+      &:nth-child(2n + 1) {
+        padding-right: 4rem;
+      }
+
+      &:nth-child(2n + 2) {
+        padding-left: 4rem;
+      }
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+
+      > * {
+        display: inline;
+      }
+    }
+  }
+
+  a {
+    font-weight: 400;
+    line-height: 1.5;
+    border-bottom: 0 none !important;
+    font-family: $header-font-family;
+    box-shadow: inset 0 0 0 transparent !important;
+
+    &:hover {
+      color: $alert-color;
+      text-decoration: none !important;
+      background-color: transparent !important;
+    }
+  }
+}
+
+.where-to .text-uppercase.category-label.category-label-alt::before{
+  left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+     top: 0;
+    height: 5px;
+    content: "";
+    width: 50px;
+    position: absolute;
+    background-color: #ff9662;
+    top: 30px;
+  
+
+  
+}
+
+@media (max-width: $screen-tablet-min) {
+
+  .where-to {
+
+    .where-to-links {
+      &:before {
+        display: none;
+      }
+
+      ul {
+        margin-left: 20px;
+        list-style-position: outside;
+      }
+
+      li {
+        width: 100%;
+        flex: 0 0 auto;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.lgbtq-full-video {
+  background-color: #000000;
+  overflow: hidden;
+  position: relative;
+}
+
+.lgbtq-full-video .lgbtq-video-container {
+  position: relative;
+  padding-bottom: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+.lgbtq-full-video .lgbtq-video-container.lgbtq-custom-video {
+  padding-bottom: 150%;
+}
+
+.lgbtq-full-video .lgbtq-video {
+  background-color: #000000;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.lgbtq-full-video .lgbtq-full-video-caption {
+  background-color: #000000;
+  padding-bottom: 0px;
+  padding-right: 20px;
+  position: relative;
+  text-align: right;
+}
+
+.lgbtq-full-video-caption p {
+  background-color: #000000;
+}
+
+
+@media (min-width: 1024px) {
+  .lgbtq-full-video .lgbtq-video-container.lgbtq-henrietta-video {
+    padding-bottom: 0%;
+    height: auto;
+    margin-top: -202px;
+  }
+
+  .lgbtq-henrietta-video .lgbtq-video {
+    position: relative;
+  }
+}
+
+@media (max-width:767px) {
+  .lgbtq-henrietta-video {
+    margin-bottom: -101px;
+    padding-bottom: 170% !important;
+  }
+
+  .lgbtq-henrietta-video::before {
+    display: none;
+  }
+
+  .lgbtq-henrietta-video::after {
+    bottom: 75px !important;
+  }
+
+  .lgbtq-henrietta-video .lgbtq-video {
+    top: -100px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .lgbtq-full-video .lgbtq-video-container,
+  .lgbtq-full-video .lgbtq-video-container.lgbtq-custom-video {
+    padding-bottom: 58%;
+    /* 4:3 ratio */
+  }
+
+  .lgbtq-full-video .lgbtq-full-video-caption {
+    bottom: 0;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    position: absolute;
+    right: 0;
+  }
+
+  .lgbtq-full-video .lgbtq-full-video-caption {
+    background-color: transparent;
+  }
+
+  .lgbtq-full-video-caption p {
+    background-color: transparent;
+  }
+}

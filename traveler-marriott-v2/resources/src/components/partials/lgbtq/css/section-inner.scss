@@ -1,0 +1,19 @@
+.lgbtq-section-inner-heading .lgbtq-callout-copy {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.lgbtq-section-inner-body p {
+  margin-bottom: 40px;
+}
+
+.lgbtq-section-inner-body p:last-child {
+  margin-bottom: 0;
+}
+
+
+@media (min-width: 1024px) {
+  .lgbtq-section-inner-heading .lgbtq-callout-copy {
+    margin-top: 40px;
+  }
+}

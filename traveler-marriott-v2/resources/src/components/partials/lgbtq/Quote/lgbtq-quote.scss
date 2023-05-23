@@ -1,0 +1,138 @@
+/* Quote Left */
+@import "../../../../../assets/sass/variables";
+
+.lgbtq-quote-left-container {
+  padding-bottom: 80px;
+  padding-top: 80px;
+  width: calc(100% * (9 / 12));
+}
+
+.lgbtq-quote-left .lgbtq-section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.lgbtq-quote-left .lgbtq-section-image-background {
+  position: relative;
+}
+
+.lgbtq-quote-left .lgbtq-section-image-background img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Quote Right */
+.lgbtq-quote-right-container {
+  padding-bottom: 80px;
+  padding-top: 80px;
+  width: calc(100% * (9 / 12));
+}
+
+.lgbtq-quote-right .lgbtq-section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.lgbtq-quote-right .lgbtq-section-image-background {
+  position: relative;
+}
+
+.lgbtq-quote-right .lgbtq-section-image-background img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Quote Copy */
+.lgbtq-quote-copy {
+  color: white;
+  font-family: $header-font-family;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 140%;
+  padding-bottom: 60px;
+  padding-top: 40px;
+  margin: 0;
+}
+
+/* Quote Divider */
+.lgbtq-quote-divider-container {
+  position: relative;
+  overflow: hidden;
+  width: 155px;
+}
+
+.lgbtq-quote-divider {
+  background-color: #FF00A8;
+  border: 1px solid #FF00A8;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (max-width: 375px) {
+  .lgbtq-drag-burlesque .lgbtq-bg-mobile img {
+    height: 60% !important;
+    top: 215px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .lgbtq-alex-minko::after {
+    display: none;
+  }
+
+  .lgbtq-drag-burlesque .lgbtq-bg-mobile img {
+    object-fit: cover !important;
+    height: 80%;
+    top: 145px;
+  }
+
+  .lgbtq-quote-left .lgbtq-quote-copy br,
+  .lgbtq-quote-right .lgbtq-quote-copy br {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lgbtq-lgbtq-quote-copy {
+    font-size: 36px;
+  }
+
+  .lgbtq-quote-left .lgbtq-section-image-background img {
+    object-position: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lgbtq-quote-left-container {
+    padding-bottom: 100px;
+    padding-top: 100px;
+    width: calc(100% * (6 / 12));
+  }
+
+  .lgbtq-quote-right-container {
+    margin-left: calc(100% * (4 / 12));
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: calc(100% * (8 / 12));
+  }
+
+  .lgbtq-quote-copy {
+    font-size: 48px;
+    line-height: 160%;
+    padding-bottom: 80px;
+  }
+
+  .lgbtq-quote-divider-container {
+    width: 340px;
+  }
+}

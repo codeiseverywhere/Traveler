@@ -1,0 +1,72 @@
+{
+    "key": "group_5d80288ba459d",
+    "title": "Advertising",
+    "fields": [
+        {
+            "key": "field_5d8028936117d",
+            "label": "ID",
+            "name": "id",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5d8028af6117e",
+            "label": "Type",
+            "name": "type",
+            "type": "select",
+            "instructions": "Select if it's a single ad or a group",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "banner": "Single",
+                "group": "Group"
+            },
+            "default_value": [
+                "banner"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/traveler-blocks-advertising"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1568682723
+}

@@ -1,0 +1,20 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": "last 4 versions, > 3%, ie >= 10"
+        },
+        "bugfixes": true,
+        "useBuiltIns": "entry",
+        "corejs": 3
+      }
+    ]
+  ],
+	"plugins": [
+		"@babel/plugin-syntax-dynamic-import",
+		"@babel/plugin-syntax-class-properties",
+		"@babel/plugin-proposal-class-properties"
+	]
+}

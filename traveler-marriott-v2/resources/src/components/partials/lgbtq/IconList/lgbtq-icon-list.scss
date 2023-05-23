@@ -1,0 +1,185 @@
+@import "../../../../../assets/sass/variables";
+
+.lgbtq-icon-and-list {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.lgbtq-icon-and-list__inner {
+  position: relative;
+}
+
+.lgbtq-icon-and-list__background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 10%;
+}
+
+.lgbtq-icon-and-list__background img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: block;
+  object-fit: cover;
+  object-position: 100%;
+}
+
+.lgbtq-icon-and-list__header {
+  border-top: 4px solid #FF00A8;
+  width: 66.66%;
+  padding-bottom: 40px;
+  padding-top: 88px;
+}
+
+.lgbtq-icon-and-list__header h1,
+.lgbtq-icon-and-list__header h2,
+.lgbtq-icon-and-list__header h3,
+.lgbtq-icon-and-list__header h4,
+.lgbtq-icon-and-list__header h5,
+.lgbtq-icon-and-list__header h6 {
+  color: white;
+  font-family: $header-font-family;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 100%;
+  text-transform: capitalize;
+}
+
+@media (min-width: 720px) {
+
+  .lgbtq-icon-and-list__header h1,
+  .lgbtq-icon-and-list__header h2,
+  .lgbtq-icon-and-list__header h3,
+  .lgbtq-icon-and-list__header h4,
+  .lgbtq-icon-and-list__header h5,
+  .lgbtq-icon-and-list__header h6 {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lgbtq-icon-and-list {
+    padding-bottom: 160px;
+    padding-top: 160px;
+  }
+
+  .lgbtq-icon-and-list__header h1,
+  .lgbtq-icon-and-list__header h2,
+  .lgbtq-icon-and-list__header h3,
+  .lgbtq-icon-and-list__header h4,
+  .lgbtq-icon-and-list__header h5,
+  .lgbtq-icon-and-list__header h6 {
+    font-size: 80px;
+  }
+}
+
+.lgbtq-icon-and-list__list-item-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 47px;
+  margin-top: 80px;
+}
+
+.lgbtq-icon-and-list__list-item-title .lgbtq-eyebrow {
+  padding: 0;
+  margin: 0;
+}
+
+.lgbtq-icon-and-list__list-item-title .lgbtq-eyebrow p {
+  margin-bottom: 0;
+}
+
+.lgbtq-icon-and-list__list-item-title img {
+  display: block;
+  width: 30px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.lgbtq-icon-and-list__list-item .rich-text img {
+  margin-top: 100px;
+  width: 100%;
+}
+
+.lgbtq-icon-and-list__list-item .rich-text>* {
+  margin-top: 40px;
+}
+
+.lgbtq-icon-and-list__list-item .rich-text a {
+  text-decoration: underline;
+  display: inline-block;
+}
+
+.lgbtq-icon-and-list__list-item .rich-text h1,
+.lgbtq-icon-and-list__list-item .rich-text h2,
+.lgbtq-icon-and-list__list-item .rich-text h3,
+.lgbtq-icon-and-list__list-item .rich-text h4,
+.lgbtq-icon-and-list__list-item .rich-text h5,
+.lgbtq-icon-and-list__list-item .rich-text h6,
+.lgbtq-icon-and-list__list-item .rich-text li {
+  color: white;
+  font-family: $header-font-family;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 100%;
+}
+
+@media (min-width: 720px) {
+
+  .lgbtq-icon-and-list__list-item .rich-text h1,
+  .lgbtq-icon-and-list__list-item .rich-text h2,
+  .lgbtq-icon-and-list__list-item .rich-text h3,
+  .lgbtq-icon-and-list__list-item .rich-text h4,
+  .lgbtq-icon-and-list__list-item .rich-text h5,
+  .lgbtq-icon-and-list__list-item .rich-text h6,
+  .lgbtq-icon-and-list__list-item .rich-text li {
+    font-size: 32px;
+    line-height: 130%;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .lgbtq-icon-and-list__list-item .rich-text h1,
+  .lgbtq-icon-and-list__list-item .rich-text h2,
+  .lgbtq-icon-and-list__list-item .rich-text h3,
+  .lgbtq-icon-and-list__list-item .rich-text h4,
+  .lgbtq-icon-and-list__list-item .rich-text h5,
+  .lgbtq-icon-and-list__list-item .rich-text h6,
+  .lgbtq-icon-and-list__list-item .rich-text li {
+    font-size: 36px;
+  }
+}
+
+.lgbtq-icon-and-list__list-item .rich-text .lgbtq-body-copy p {
+  color: white;
+  font-family: $body-font-family;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .lgbtq-icon-and-list__list-item .rich-text .lgbtq-body-copy p {
+    font-size: 20px;
+  }
+}
+
+.lgbtq-icon-and-list__list-item .rich-text li {
+  margin-left: 20px;
+}
+
+.lgbtq-icon-and-list__list-item .rich-text ul {
+  margin-left: 0;
+  margin-top: 40px;
+  padding-left: 40px;
+  margin-bottom: 0;
+}

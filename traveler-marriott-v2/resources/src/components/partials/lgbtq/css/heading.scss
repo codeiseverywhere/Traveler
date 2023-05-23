@@ -1,0 +1,95 @@
+/* Headings */
+@import "../../../../../assets/sass/variables";
+
+.lgbtq-header-1 {
+  color: white;
+  font-family: $header-font-family;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 100%;
+}
+
+.lgbtq-header-2 {
+  color: white;
+  font-family: $header-font-family;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 100%;
+}
+
+.lgbtq-header-3 {
+  color: white;
+  font-family: $header-font-family;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 100%;
+}
+
+.lgbtq-header-4 {
+  color: white;
+  font-family: $header-font-family;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 130%;
+}
+
+.lgbtq-header-5,
+.lgbtq-header-6 {
+  color: white;
+  font-family: $header-font-family;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 130%;
+}
+
+@media (min-width: 720px) {
+  .lgbtq-header-1 {
+    font-size: 60px;
+  }
+
+  .lgbtq-header-2 {
+    font-size: 48px;
+  }
+
+  .lgbtq-header-3 {
+    font-size: 32px;
+    line-height: 130%;
+  }
+
+  .lgbtq-header-4 {
+    font-size: 30px;
+  }
+
+  .lgbtq-header-5,
+  .lgbtq-header-6 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lgbtq-header-1 {
+    font-size: 80px;
+  }
+
+  .lgbtq-header-2 {
+    font-size: 60px;
+  }
+
+  .lgbtq-header-3 {
+    font-size: 36px;
+  }
+
+  .lgbtq-header-4 {
+    font-size: 36px;
+  }
+
+  .lgbtq-header-5,
+  .lgbtq-header-6 {
+    font-size: 26px;
+  }
+}

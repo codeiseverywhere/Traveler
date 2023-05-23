@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+// Variables
+// =================================================
+@import '../../../../assets/sass/variables';
+@import '../../../../assets/sass/mixins';
+
+// Interactive Settings
+// =================================================
+@import "../../../../assets/sass/isettings";
+
+.social-share {
+  left: 0;
+  top: 50%;
+  margin: 0;
+  z-index: 5;
+  cursor: pointer;
+  position: fixed;
+  overflow: hidden;
+  padding-top: 10px;
+  transform: translateY(-50%);
+}
+
+.addthis_default_style > a {
+  margin: 0;
+  display: block;
+  float: none !important;
+}
+
+
+.social {
+  width: 210px;
+  margin: 0 auto;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.3s ease;
+
+  ul,
+  .addthis_toolbox,
+  .addthis_sharing_toolbox {
+    padding: 0;
+  }
+
+  li,
+  .share {
+    float: left;
+    width: $social-icon-width;
+    text-align: center;
+  }
+
+  .share {
+    background: white;
+    padding: 4px 0;
+    color: $medium-gray;
+    border: 1px solid $light-gray;
+  }
+
+  &.collapsible {
+    width: $social-icon-width;
+
+    &.active {
+      width: $social-icon-width * 5 + 20px;
+    }
+
+    ul,
+    .addthis_toolbox,
+    .addthis_sharing_toolbox {
+      position: absolute;
+      left: $social-icon-width;
+    }
+  }
+
+  .at-share-tbx-element .at-share-btn {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .affix & .addthis_toolbox > a {
+    margin: 0;
+    padding: 0;
+    display: block;
+    @media (max-width: $screen-tablet-min) {
+      margin: 0 5px;
+    }
+    @media (min-width: $screen-tablet-min + 1) {
+      float: none;
+    }
+  }
+
+  li {
+    padding: 11px 0;
+
+    a {
+      color: $white;
+    }
+
+    &.facebook:hover,
+    &.twitter:hover,
+    &.google:hover,
+    &.email:hover {
+      a {
+        color: darken($white, 10%);
+      }
+    }
+
+    &.facebook {
+      background: $facebook-blue;
+
+      &:hover {
+        background: darken($facebook-blue, 10%);
+      }
+    }
+
+    &.twitter {
+      background: $twitter-blue;
+
+      &:hover {
+        background: darken($twitter-blue, 10%);
+      }
+    }
+
+    &.google {
+      background: $google-red;
+
+      &:hover {
+        background: darken($google-red, 10%);
+      }
+    }
+
+    &.email {
+      background: $medium-gray;
+
+      &:hover {
+        background: darken($medium-gray, 10%);
+      }
+    }
+  }
+}
+
+.share-top-inline {
+  float: none;
+  width: auto;
+  z-index: 1000;
+  overflow: hidden;
+  min-height: 42px;
+  position: relative;
+  text-align: center;
+  padding-bottom: 16px;
+  background-color: $white;
+
+  &.affix {
+    top: 124px;
+    z-index: 1000;
+    padding: 4px 4px 0;
+    visibility: visible;
+    background: rgba($white, 0.59);
+    @media (max-width: $screen-tablet-min) {
+      top: 0;
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    @media (min-width: $screen-tablet-min + 1) {
+      .social {
+        width: auto;
+      }
+    }
+  }
+
+  p.context-label {
+    font-weight: 600;
+  }
+
+}
+
+@media (max-width: $screen-tablet-min) {
+  .social-share {
+    left: 50%;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: $white;
+    transform: translateX(-50%);
+  }
+
+  .addthis_default_style > a {
+    padding: 0 !important;
+    width: 17% !important;
+    display: inline-block;
+  }
+}

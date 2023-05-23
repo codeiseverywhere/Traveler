@@ -1,0 +1,149 @@
+/* Hero Video */
+@import "../../../../../assets/sass/variables";
+
+.lgbtq-hero-banner .lgbtq-video-container {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.lgbtq-hero-banner .lgbtq-video {
+  background-color: #000000;
+  height: auto;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  z-index: 2;
+}
+
+/* Hero Image */
+.lgbtq-hero-banner .lgbtq-hero-image {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Hero Content */
+.lgbtq-hero-banner .lgtbq-hero-banner-heading {
+  color: white;
+  font-family: $header-font-family;
+  font-size: 130px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 106px;
+}
+
+.lgbtq-hero-banner .lgbtq-eyebrow {
+  border-bottom: 2px solid #FF00A8;
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.lgbtq-hero-banner .lgbtq-hero-content {
+  display: flex;
+  flex-flow: wrap;
+  margin: 78px 0 135px;
+  position: relative;
+  z-index: 10;
+}
+
+.lgbtq-hero-banner .lgbtq-hero-content-heading {
+  margin-right: 0;
+  width: 100%;
+}
+
+.lgbtq-hero-banner .lgbtq-hero-content-body {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  margin-right: 30px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.lgbtq-hero-banner .lgbtq-header {
+  color: white;
+  font-family: $body-font-family;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 124%;
+  width: 80%;
+}
+
+.lgbtq-hero-banner .lgbtq-sub-header {
+  color: white;
+  font-family: $body-font-family;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  line-height: 130%;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+@media (min-width: 500px) {
+  .lgbtq-hero-banner .lgtbq-hero-banner-heading {
+    font-size: 160px;
+    line-height: 136px;
+  }
+
+  .lgbtq-hero-banner .lgbtq-eyebrow {
+    margin-left: 85px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  /* Hero Content */
+  .lgbtq-hero-banner .lgbtq-hero-content {
+    margin: 65px 0;
+  }
+
+  .lgbtq-hero-banner .lgbtq-hero-content-heading {
+    margin-right: calc(100% * (6 / 12));
+    width: calc(100% * (6 / 12));
+  }
+
+  .lgbtq-hero-banner .lgbtq-hero-content-body {
+    align-items: flex-start;
+    margin-left: calc(100% * (6 / 12));
+    margin-right: 0px;
+    margin-top: 0px;
+    width: calc(100% * (6 / 12));
+  }
+
+  .lgbtq-hero-banner .lgtbq-hero-banner-heading {
+    font-size: 238px;
+    line-height: 192px;
+  }
+
+  .lgbtq-hero-banner .lgbtq-header {
+    font-size: 36px;
+    line-height: 130%;
+    width: 100%;
+  }
+
+  .lgbtq-hero-banner .lgbtq-sub-header {
+    font-size: 21px;
+    margin-top: 44px;
+  }
+
+  .lgbtq-hero-banner .lgbtq-eyebrow {
+    font-size: 18px;
+    margin-bottom: 68px;
+    margin-left: 0;
+  }
+}

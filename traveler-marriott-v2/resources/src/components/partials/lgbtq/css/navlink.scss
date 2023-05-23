@@ -1,0 +1,280 @@
+%navlink-li {
+  position: relative;
+  text-transform: uppercase;
+  font-family: Helvetica;
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: center;
+  min-width: 262px;
+}
+
+.lgbtq-navlink {
+  background-color: #000;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999999;
+}
+
+.lgbtq-navlink__desktop {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .lgbtq-navlink__desktop {
+    display: block;
+  }
+}
+
+.lgbtq-navlink__desktop ul.lgbtq-navlink__scroll {
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+.lgbtq-navlink__desktop ul.lgbtq-navlink__scroll li {
+  min-width: 262px;
+  width: auto;
+}
+
+.lgbtq-navlink ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
+  overflow-y: auto;
+  width: 100%;
+}
+
+@media (min-width: 720px) {
+  .lgbtq-navlink ul {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1440px) {
+  .lgbtq-navlink ul {
+    justify-content: center;
+    overflow-y: hidden;
+  }
+}
+
+.lgbtq-navlink li {
+  position: relative;
+  text-transform: uppercase;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  border-right: none;
+  text-align: center;
+  min-width: 262px;
+  width: auto;
+  padding: 10px 0;
+
+}
+
+@media (min-width: 720px) {
+  .lgbtq-navlink li {
+    /* border-right: 1px solid #fff; */
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .lgbtq-navlink li {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+/* .lgbtq-navlink li:nth-last-of-type(1) {
+  border-right: none;
+} */
+
+.lgbtq-navlink li::after {
+  display: inline-block;
+  content: "";
+  height: 100%;
+  width: 1px;
+  background-color: #fff;
+}
+
+.lgbtq-navlink li:nth-last-of-type(1)::after {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .lgbtq-navlink li::after {
+    position: absolute;
+    right: 0;
+    height: 34px;
+  }
+}
+
+.lgbtq-navlink .lgbtq-navlink__scroll-progress-bar-container {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.lgbtq-navlink .lgbtq-navlink__scroll-progress-bar {
+  background-color: #FF00A8;
+  height: 2px;
+  transform: rotate(-180deg);
+  width: 100%;
+}
+
+.lgbtq-navlink .lgbtq-navlink__scroll-progress-bar span {
+  background-color: #000;
+  display: block;
+  height: 2.5px;
+  margin-left: 0;
+}
+
+.lgbtq-navlink li .lgbtq-navlink-nav-title {
+  @extend %navlink-li;
+
+  display: flex;
+  padding: 3px 0 0;
+  align-items: center;
+  justify-content: center;
+  min-width: none;
+}
+
+@media (min-width: 720px) {
+  .lgbtq-navlink li .lgbtq-navlink-nav-title {
+    display: inline-block;
+    padding: 8px 42px;
+  }
+}
+
+.lgbtq-navlink__mobile {
+  display: block;
+}
+
+@media (min-width: 720px) {
+  .lgbtq-navlink__mobile {
+    display: none;
+  }
+}
+
+#lgbtq-navlink__mobile-button {
+  @extend %navlink-li;
+
+  display: flex;
+  padding: 3px 0 0;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: transparent;
+  border: none;
+  /* display: block; */
+
+
+  height: 40px;
+  width: 100%;
+  z-index: 3;
+
+  &::after {
+    background: none;
+    content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 491.996 491.996' style='enable-background:new 0 0 491.996 491.996;' xml:space='preserve' fill='%23ffffff'%3E%3Cg%3E%3Cg%3E%3Cpath d='M484.132,124.986l-16.116-16.228c-5.072-5.068-11.82-7.86-19.032-7.86c-7.208,0-13.964,2.792-19.036,7.86l-183.84,183.848 L62.056,108.554c-5.064-5.068-11.82-7.856-19.028-7.856s-13.968,2.788-19.036,7.856l-16.12,16.128 c-10.496,10.488-10.496,27.572,0,38.06l219.136,219.924c5.064,5.064,11.812,8.632,19.084,8.632h0.084 c7.212,0,13.96-3.572,19.024-8.632l218.932-219.328c5.072-5.064,7.856-12.016,7.864-19.224 C491.996,136.902,489.204,130.046,484.132,124.986z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A");
+    ;
+    display: inline-block;
+    width: 14px;
+    height: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 720px) {
+  #lgbtq-navlink__mobile-button {
+    display: none;
+  }
+}
+
+.lgbtq-navlink__drawer {
+  border-top: 4px solid #FF00A8;
+}
+
+// .lgbtq-navlink__drawer {
+//   display: none;
+// }
+
+// @media (min-width: 720px) {
+//   .lgbtq-navlink__drawer {
+//     display: block;
+//   }
+// }
+
+.lgbtq-navlink__drawer li {
+  position: relative;
+}
+
+.lgbtq-navlink__drawer li .lgbtq-navlink-nav-title {
+  padding: 0;
+  display: inline-block;
+}
+
+// .lgbtq-navlink__drawer li:nth-child(1) {}
+
+// .lgbtq-navlink__drawer li:nth-child(1):after {
+//   background: none;
+//   content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 491.996 491.996' style='enable-background:new 0 0 491.996 491.996;' xml:space='preserve' fill='%23ffffff'%3E%3Cg%3E%3Cg%3E%3Cpath d='M484.132,124.986l-16.116-16.228c-5.072-5.068-11.82-7.86-19.032-7.86c-7.208,0-13.964,2.792-19.036,7.86l-183.84,183.848 L62.056,108.554c-5.064-5.068-11.82-7.856-19.028-7.856s-13.968,2.788-19.036,7.856l-16.12,16.128 c-10.496,10.488-10.496,27.572,0,38.06l219.136,219.924c5.064,5.064,11.812,8.632,19.084,8.632h0.084 c7.212,0,13.96-3.572,19.024-8.632l218.932-219.328c5.072-5.064,7.856-12.016,7.864-19.224 C491.996,136.902,489.204,130.046,484.132,124.986z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A");
+//   ;
+//   display: inline-block;
+//   width: 14px;
+//   height: 10px;
+//   margin-left: 10px;
+// }
+
+/* .lgbtq-navlink__selected {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+} */
+
+/* .lgbtq-navlink .lgbtq-navlink__selected .lgbtq-navlink__scroll-progress-bar {
+  height: 6px;
+}
+
+.lgbtq-navlink .lgbtq-navlink__selected .lgbtq-navlink__scroll-progress-bar span {
+  height: 8px;
+}
+
+.lgbtq-navlink__selected li:after {
+  display: none;
+}
+
+.lgbtq-navlink__selected ul {
+  position: relative;
+  height: 40px;
+} */
+/*
+.lgbtq-navlink__selected li {
+  position: absolute;
+  display: block;
+  width: 100%;
+  display: none;
+} */
+/*
+.lgbtq-navlink__selected li.lgbtq-navlink__mobile-nav-item--active {
+  display: block;
+}
+
+.lgbtq-navlink__selected li.lgbtq-navlink__mobile-nav-item--active .lgbtq-navlink-nav-title:after {
+  content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 491.996 491.996' style='enable-background:new 0 0 491.996 491.996;' xml:space='preserve' fill='%23ffffff'%3E%3Cg%3E%3Cg%3E%3Cpath d='M484.132,124.986l-16.116-16.228c-5.072-5.068-11.82-7.86-19.032-7.86c-7.208,0-13.964,2.792-19.036,7.86l-183.84,183.848 L62.056,108.554c-5.064-5.068-11.82-7.856-19.028-7.856s-13.968,2.788-19.036,7.856l-16.12,16.128 c-10.496,10.488-10.496,27.572,0,38.06l219.136,219.924c5.064,5.064,11.812,8.632,19.084,8.632h0.084 c7.212,0,13.96-3.572,19.024-8.632l218.932-219.328c5.072-5.064,7.856-12.016,7.864-19.224 C491.996,136.902,489.204,130.046,484.132,124.986z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A");;
+  display: inline-block;
+  width: 14px;
+  height: 10px;
+  margin-top: -5px;
+  margin-left: 10px;
+} */
